@@ -81,7 +81,7 @@ function populateCategoryDatalist(){
       categoryInput.value = cat;
       updatePickedCategoryUI();
       hideCategoryDropdown();
-      categoryInput.focus();
+      // do not auto-focus to avoid keyboard pop on mobile; focus only if user tapped intentionally
     });
     item.querySelector(".remove-cat").addEventListener("click", (e) => {
       e.stopPropagation();
@@ -216,7 +216,6 @@ function sortTasks(arr, mode){
       const cb = (b.category || "").toLowerCase();
       if (ca < cb) return -1;
       if (ca > cb) return 1;
-      // tie-breaker: created newest first
       return b.created - a.created;
     });
   }
@@ -271,7 +270,7 @@ function renderTasks(filter=currentFilter, search=currentSearch, sortMode=curren
     catBadge.addEventListener("click", ()=> {
       categoryInput.value = task.category || "";
       updatePickedCategoryUI();
-      categoryInput.focus();
+      // do not auto-focus on mobile
     });
     line1.appendChild(catBadge);
 
@@ -329,7 +328,7 @@ function addTask(){
   currentFilter = "active";
   filterButtons.forEach(b => b.classList.toggle("active", b.dataset.filter === "active"));
   renderTasks();
-  taskInput.focus();
+  // on mobile avoid forcing keyboard; do not auto-focus
 }
 
 function clearInputs(){ taskInput.value=""; dateInput.value = new Date().toISOString().slice(0,10); categoryInput.value=""; remarksInput.value=""; priorityInput.value="High"; updatePickedCategoryUI(); hideCategoryDropdown(); }

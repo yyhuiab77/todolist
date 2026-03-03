@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>✨ My To-Do List ✨</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -15,13 +15,13 @@
     <section class="input-area" id="inputArea" aria-label="Add task">
       <div class="row top-row">
         <label class="visually-hidden" for="taskInput">Task</label>
-        <input type="text" id="taskInput" placeholder="What do you want to do?" autocomplete="off" />
+        <input type="text" id="taskInput" placeholder="What do you want to do?" autocomplete="off" inputmode="text" />
 
         <label class="visually-hidden" for="dateInput">Date</label>
         <input type="date" id="dateInput" />
 
         <label class="visually-hidden" for="priorityInput">Priority</label>
-        <select id="priorityInput" title="Priority">
+        <select id="priorityInput" title="Priority" aria-label="Priority">
           <option value="High" selected>High</option>
           <option value="Medium">Medium</option>
           <option value="Low">Low</option>
@@ -38,7 +38,7 @@
         </div>
 
         <label class="visually-hidden" for="remarksInput">Remarks</label>
-        <input type="text" id="remarksInput" placeholder="Remarks (optional)" autocomplete="off" />
+        <input type="text" id="remarksInput" placeholder="Remarks (optional)" autocomplete="off" inputmode="text" />
 
         <button id="addBtn" class="btn primary" aria-label="Add task">Add</button>
       </div>
@@ -55,7 +55,7 @@
 
       <div class="right-controls">
         <label class="visually-hidden" for="sortSelect">Sort</label>
-        <select id="sortSelect" title="Sort tasks">
+        <select id="sortSelect" title="Sort tasks" aria-label="Sort tasks">
           <option value="created_desc">Newest</option>
           <option value="created_asc">Oldest</option>
           <option value="priority_desc">Priority High→Low</option>
