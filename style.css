@@ -6,7 +6,7 @@
   --card:#ffffff;
   --muted:#6b6b6b;
   --danger:#e53935;
-  --radius:12px;
+  --radius:15px;
   --shadow-desktop: 0 12px 30px rgba(0,0,0,0.18);
   --shadow-mobile: 0 6px 14px rgba(0,0,0,0.12);
   --header-height:72px;
@@ -60,7 +60,7 @@ body{
   min-height:var(--input-height);
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:3px;
   flex:0 0 auto;
 }
 .row{display:flex;gap:8px;align-items:center}
@@ -96,7 +96,7 @@ body{
   padding:12px;
   border-radius:8px;
   cursor:pointer;
-  font-size:16px;
+  font-size:10px;
 }
 .category-item:hover{background:rgba(0,0,0,0.03)}
 .category-item .label{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -112,7 +112,7 @@ body{
 .input-area select{max-width:160px}
 
 /* Buttons */
-.btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(0,0,0,0.06);background:#fff;cursor:pointer;font-weight:700;font-size:16px;min-height:var(--touch-size)}
+.btn{padding:10px 14px;border-radius:15px;border:1px solid rgba(0,0,0,0.06);background:#fff;cursor:pointer;font-weight:700;font-size:16px;min-height:var(--touch-size)}
 .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;border:none}
 .btn.danger{background:var(--danger);color:#fff;border:none}
 
@@ -162,7 +162,7 @@ body{
 .priority-badge{display:inline-block;padding:6px 10px;border-radius:8px;font-size:13px;color:#fff;margin-left:8px;vertical-align:middle;white-space:nowrap}
 .priority-high{background:#d32f2f}
 .priority-medium{background:#f57c00}
-.priority-low{background:#2e7d32}
+.priority-low{background:#04cc29}
 
 /* Line 2: due date & created */
 .line-meta{font-size:13px;color:var(--muted)}
